@@ -2,4 +2,23 @@ body {
   background: #fff;
 }
 
+div.logo {
+  justify-content: center;
+  display: flex;
+
+}
+
+div.logo img{
+  height: 120px;
+  margin: 25px;
+}
+
+#donwload {
+  border: 8px solid black;
+  border-left-color: #f0407b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.2s linear infinite;
+}
 
