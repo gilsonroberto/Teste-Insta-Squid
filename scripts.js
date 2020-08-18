@@ -67,8 +67,24 @@ document.addEventListener("DOMContentLoaded", function() {
   
       }
 
+      
+      const { username } = usuario;
 
-        
+      let user = "@"+" "+username;
+      let vote = '&#10084;'+" "+upvotes;
+      let coments = '💬'+" "+comentarios;
+      let day = '🗓'+" "+date(criadoEm);
+
+      const description = [user, vote, coments, day];
+
+      description.map(item => {
+        const wrapItem = document.createElement("p");
+        wrapItem.classList.add("item");
+        wrapItem.innerHTML = item;
+
+        wrapInfo.appendChild(wrapItem);
+      });
+            
       wrap.appendChild(wrapHref);
       wrapHref.appendChild(wrapInfo);
       wrap.appendChild(wrapImage);

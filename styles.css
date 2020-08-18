@@ -50,7 +50,7 @@ div.post-wrapper {
 }
 
 div.post-wrapper:hover .post-info {
-  opacity: 0.3;
+  opacity: .6;
 }
 
 ul.post-item {
@@ -65,7 +65,7 @@ ul.post-item {
 }
 
 div.post-info {
-  font-size: 1rem;
+  font-size: .6rem;
   text-align: center;
   justify-content: center;
   align-items: center;
