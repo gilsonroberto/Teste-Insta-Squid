@@ -32,6 +32,57 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function showInform({ medias, pagination }) {
 
+    medias.map(item => {
+      const { usuario,  imagens,  comentarios, upvotes, criadoEm, link } = item;
+
+      const wrap = document.createElement("div");
+      wrap.classList.add("post-wrapper");
+
+      const wrapHref = document.createElement("a");
+      wrapHref.classList.add("post-href");
+      wrapHref.setAttribute("href", link); 
+      wrapHref.setAttribute("target", "_blank"); 
+
+      const wrapImage = document.createElement("img");
+      wrapImage.classList.add("post-img");
+      wrapImage.setAttribute("src", imagens.resolucaoPadrao.url);    
+      
+      const wrapSection = document.createElement("section");
+      wrapSection.classList.add("posts-section");
+
+      const wrapInfo = document.createElement("div");
+      wrapInfo.classList.add("post-info");
+
+      function date(params) {
+        let setDate = new Date(params);
+        let day  = ("0"+(setDate.getDate())).slice(-2);
+        let month  = ("0" + (setDate.getMonth()+1)).slice(-2);
+        let year = setDate.getFullYear();
+        let hour = ("0"+(setDate.getHours())).slice(-2); 
+        let min  = ("0"+(setDate.getMinutes())).slice(-2);
+  
+        let data = day+'/'+month+'/'+year +" "+ hour+':'+min
+  
+        return data;
+  
+      }
+
+
+        
+      wrap.appendChild(wrapHref);
+      wrapHref.appendChild(wrapInfo);
+      wrap.appendChild(wrapImage);
+
+      container.appendChild(wrap);
+    });
+
+    
+    $(window).scroll(function() {
+      if ($(document).height() - $(this).height() == $(this).scrollTop()) {
+        upDownload(pagination.next_url);
+      }
+    });
+
   }
 
 });
