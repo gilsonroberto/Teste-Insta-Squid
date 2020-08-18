@@ -1,5 +1,6 @@
 body {
   background: #fff;
+  background: url("./assets/background.svg");
 }
 
 div.logo {
@@ -63,3 +64,21 @@ ul.post-item {
   }
 }
 
+div.post-info {
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  color: white;
+  transition: 700ms opacity ease-in-out;
+}
