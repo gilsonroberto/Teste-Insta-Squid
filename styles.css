@@ -22,3 +22,44 @@ div.logo img{
   animation: spin 1.2s linear infinite;
 }
 
+main.container {
+  padding-top: 45px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div.post-wrapper {
+  max-width: 100px;
+  align-items: center;
+  position: relative;
+  margin: 6px 6px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.post-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 150px;
+}
+
+div.post-wrapper:hover .post-info {
+  opacity: 0.3;
+}
+
+ul.post-item {
+  list-style-type: none;
+  text-align: center;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
